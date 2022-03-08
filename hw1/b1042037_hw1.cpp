@@ -7,18 +7,18 @@ int main()
  FILE *fp;
 	fp = fopen("lotto.txt","w+");
 	
-	printf("Åwªï¥úÁ{ªø©°¼Ö³z±m¾÷¥x\n");
+	printf("æ­¡è¿å…‰è‡¨é•·åºšæ¨‚é€å½©æ©Ÿå°\n");
 
 	int num, i, n, j, k, o, Y;
 	num = 0, k = 1, Y = 1;
 
 	time_t curtime;
 	time(&curtime);
-	printf("½Ğ°İ§A­n¶R´X²Õ¼Ö³z±m: ");
+	printf("è«‹å•ä½ è¦è²·å¹¾çµ„æ¨‚é€å½©: ");
 	scanf("%d", &num);
 	fprintf(fp,"%s", ctime(&curtime));
 
-	printf("¤w¬°±zÁÊ¶Rªº%d²Õ¼Ö³z²Õ¦X¿é¥X¦Ülotto.txt");
+	printf("å·²ç‚ºæ‚¨è³¼è²·çš„%dçµ„æ¨‚é€çµ„åˆè¼¸å‡ºè‡³lotto.txt",num);
 
 	srand((unsigned) time(NULL));
 	for (o = 1 ; o <= 5 ; o++){
