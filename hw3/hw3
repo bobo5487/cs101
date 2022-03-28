@@ -1,0 +1,78 @@
+(什麼是河內塔問題)
+
+河內塔（Tower of Hanoi）是根據一個傳說形成的數學問題：
+
+有三根杆子A，B，C。A杆上有 N 個 (N>1) 穿孔圓盤，盤的尺寸由下到上依次變小。要求按下列規則將所有圓盤移至 C 杆：
+
+1.每次只能移動一個圓盤。
+
+2.大盤不能疊在小盤上面。
+
+(和 recursion 有什麼關係)
+
+解決河內塔問題的最佳步驟為 2^N - 1 次，其中的N為盤的數量。
+
+而盤子的移動是有規律的。
+
+(怎麼用recursion 解決此問題)
+
+1.先指定「起始柱」和「目標柱」，剩下的那個柱就是「暫存柱」。
+
+2.先把 n-1 個盤全部移到 「暫存柱」
+
+3.再把 第 n 個盤 移動到 「目標柱」
+
+4.最後，把放在「暫存柱」的所有盤全部移到「目標柱」
+
+
+
+搬動16盤所需時間 : 6.743 seconds
+
+CPU型號 : 11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz   2.30 GHz
+
+
+
+
+
+(程式代碼)
+
+#include <stdio.h>
+
+
+
+void hanoi(int n, char A, char B, char C) {
+
+    if(n == 1) {
+
+        printf("Move sheet from %c to %c\n", A, C);
+
+    }
+
+    else {
+
+        hanoi(n-1, A, C, B);
+
+        hanoi(1, A, B, C);
+
+        hanoi(n-1, B, A, C);
+
+    }
+
+}
+
+
+
+int main() {
+
+    int n;
+
+    printf("請輸入盤數：");
+
+    scanf("%d", &n);
+
+    hanoi(n, 'A', 'B', 'C');
+
+    return 0;
+
+}
+
