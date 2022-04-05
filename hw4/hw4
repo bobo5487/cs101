@@ -1,0 +1,10 @@
+文章中strcpy.c 的bug是while(src[len++]); 需要改成while(src[++len]);
+
+len++ 為先取len值使用, 結束後再將變數len加上1
+
+++len 為先將len加上1,在開始運算
+
+根據文章內容，我們是將所有字符從src複製到dest直到到達NULL
+
+所以應該是用++len後的結果才對
+
