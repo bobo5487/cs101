@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+
+
+void rec_dec(char* s) {
+
+	 if(s > 0){
+
+	 	printf("%d,",s); 
+
+	 }
+
+	 rec_dec(s-1);
+
+}
+
+
+
+int main(){
+
+	char s[]="1234567890";
+
+	rec_dec(s);
+
+	return 0;
+
+}
