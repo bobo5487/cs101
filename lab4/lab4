@@ -1,1 +1,12 @@
+#include <stdio.h>
 
+int main(){
+	int n[]={2,6,4,8,0,7,9,1};
+	int* p;
+	p = &n[3];
+	printf("&n[4]->%d, ", &n[3]);
+	printf("n[4]=%d " , n[3]);
+	printf("p->%d ", &p);
+	printf("*p=%d", *p);
+	return 0;
+}
