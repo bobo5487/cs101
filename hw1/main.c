@@ -10,7 +10,8 @@ int main(void) {
 	printf("歡迎光臨長庚樂透彩購買機台\n請問您要買幾組樂透彩 : ");
 	scanf("%d", &n);
 
-	fp = fopen("lotto.txt", "w+");3
+	fp = fopen("lotto.txt", "w+");
+	
 	time_t curtime;
 	struct tm *info;
 	char buffer[80];
