@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include<math.h>
 
 int _sum(int x, int y){
 	return x+y;
