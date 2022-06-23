@@ -37,6 +37,9 @@ class MMmanger {
 		        	cout << "0";
 		        }
 		    }
+		    if(get_MMCapacity() == 0){
+                        cout << " <- No space ";
+            }
 		    if(!flag) {
 		    	cout << " <- Out of space:demand " << size;
 		    }
@@ -57,7 +60,6 @@ class MMmanger {
 		            break;
 		        }
 		    }
-		    
 		    if(av_size < size) {
 		        print_calloc_array(0, size);
 		        return NULL;
